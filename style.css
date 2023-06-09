@@ -28,26 +28,36 @@ body {
   background-color: var(--white);
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 14px;
-  border-radius: 10px;
+  border-radius: 35px;
 }
 
 .card-left {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
   padding: 0px 35px;
   width: 400px;
 }
 
+.card-left > *{
+  margin: 0px;
+}
 
 .title {
   font-size: 3.5em;
   color: var(--darkGrey);
+  margin-bottom: 10px;
 }
 
 .subTitle{
     font-size: var(--fontSize);
+    margin-bottom: 15px;
+}
+
+.text{
+  margin: 3px 0px;
 }
 
 span{
@@ -59,6 +69,7 @@ span{
 .inputTitle{
   color: var(--darkGrey);
   font-weight: 700;
+  margin-top: 30px;
 }
 
 .inputEmail{
@@ -73,4 +84,5 @@ span{
   border: none;
   color: var(--white);
   background-color: var(--darkGrey);
+  margin-top: 15px;
 }
