@@ -4,8 +4,6 @@
   --grey: hsl(231, 7%, 60%);
   --white: hsl(0, 0%, 100%);
   --fontSize: 16px;
-  --fontFamily: "Roboto";
-  /* */
 }
 
 html,
@@ -29,7 +27,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 14px;
+  padding: 20px;
   border-radius: 35px;
 }
 
@@ -75,7 +73,8 @@ span{
 .inputEmail{
   padding: 20px;
   border-radius: 10px;
-  border: 1px solid grey;
+  border: 1px solid var(--grey);
+  font-size: var(--fontSize);
 }
 
 .button{
@@ -85,4 +84,5 @@ span{
   color: var(--white);
   background-color: var(--darkGrey);
   margin-top: 15px;
+  font-size: var(--fontSize);
 }
