@@ -87,3 +87,7 @@ span{
   margin-top: 15px;
   font-size: var(--fontSize);
 }
+
+button:hover{
+  cursor: pointer;
+}
