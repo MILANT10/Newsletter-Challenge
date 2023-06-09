@@ -35,9 +35,9 @@ body {
 .card-left {
   display: flex;
   flex-direction: column;
-  padding: 50px;
-  gap: 10px;
-  width: 360px;
+  gap: 5px;
+  padding: 0px 35px;
+  width: 400px;
 }
 
 
@@ -53,4 +53,24 @@ body {
 span{
   display: flex;
   align-items: center;
+  gap: 10px;
+}
+
+.inputTitle{
+  color: var(--darkGrey);
+  font-weight: 700;
+}
+
+.inputEmail{
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid grey;
+}
+
+.button{
+  padding: 20px;
+  border-radius: 10px;
+  border: none;
+  color: var(--white);
+  background-color: var(--darkGrey);
 }
