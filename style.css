@@ -36,18 +36,10 @@ body {
   display: flex;
   flex-direction: column;
   padding: 50px;
-  gap: 20px;
+  gap: 10px;
   width: 360px;
 }
 
-ul{
-    padding-left: 5px;
-}
-
-.card-left > * {
-  margin: 0%;
-  padding: 0%;
-}
 
 .title {
   font-size: 3.5em;
@@ -58,3 +50,7 @@ ul{
     font-size: var(--fontSize);
 }
 
+span{
+  display: flex;
+  align-items: center;
+}
