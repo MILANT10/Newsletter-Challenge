@@ -1,9 +1,60 @@
-:root{
-    --darkGrey: hsl(234, 29%, 20%);
-    --charcoalGrey : hsl(235, 18%, 26%);
-    --grey: hsl(231, 7%, 60%);
-    --white: hsl(0, 0%, 100%);
-    --fontSize: 16px;
-    --fontFamily : "Roboto";
-    /* font-family: 'Roboto', sans-serif; */
+:root {
+  --darkGrey: hsl(234, 29%, 20%);
+  --charcoalGrey: hsl(235, 18%, 26%);
+  --grey: hsl(231, 7%, 60%);
+  --white: hsl(0, 0%, 100%);
+  --fontSize: 16px;
+  --fontFamily: "Roboto";
+  /* */
 }
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0%;
+  padding: 0%;
+  font-family: 'Roboto', sans-serif; 
+}
+
+body {
+  background-color: var(--charcoalGrey);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  padding: 14px;
+  border-radius: 10px;
+}
+
+.card-left {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  gap: 20px;
+  width: 360px;
+}
+
+ul{
+    padding-left: 5px;
+}
+
+.card-left > * {
+  margin: 0%;
+  padding: 0%;
+}
+
+.title {
+  font-size: 3.5em;
+  color: var(--darkGrey);
+}
+
+.subTitle{
+    font-size: var(--fontSize);
+}
+
