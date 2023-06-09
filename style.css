@@ -1,3 +1,4 @@
+/* variables */
 :root {
   --darkGrey: hsl(234, 29%, 20%);
   --charcoalGrey: hsl(235, 18%, 26%);
@@ -5,7 +6,7 @@
   --white: hsl(0, 0%, 100%);
   --fontSize: 16px;
 }
-
+/* Regle HTML BODY */
 html,
 body {
   height: 100%;
@@ -21,7 +22,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-
+/* Container principale */
 .container {
   background-color: var(--white);
   display: flex;
@@ -30,7 +31,7 @@ body {
   padding: 20px;
   border-radius: 35px;
 }
-
+/* Card Gauche */
 .card-left {
   display: flex;
   flex-direction: column;
@@ -42,41 +43,41 @@ body {
 .card-left > *{
   margin: 0px;
 }
-
+/* Titre principale */
 .title {
   font-size: 3.5em;
   color: var(--darkGrey);
   margin-bottom: 10px;
 }
-
+/* Sous titre */
 .subTitle{
     font-size: var(--fontSize);
     margin-bottom: 15px;
 }
-
+/* Texte des spans */
 .text{
   margin: 3px 0px;
 }
-
+/* Span */
 span{
   display: flex;
   align-items: center;
   gap: 10px;
 }
-
+/* titre de l'input */
 .inputTitle{
   color: var(--darkGrey);
   font-weight: 700;
   margin-top: 30px;
 }
-
+/* Input pour l'émail */
 .inputEmail{
   padding: 20px;
   border-radius: 10px;
   border: 1px solid var(--grey);
   font-size: var(--fontSize);
 }
-
+/* Bouton de validation */
 .button{
   padding: 20px;
   border-radius: 10px;
