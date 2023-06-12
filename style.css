@@ -7,7 +7,7 @@
   --fontSize: 16px;
   --tomato: hsl(4, 100%, 67%);
 }
-/* Regle HTML BODY */
+/* HTML BODY */
 html,
 body {
   height: 100%;
@@ -23,7 +23,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-/* Container principale */
+/* Main container */
 .container {
   background-color: var(--white);
   display: flex;
@@ -33,7 +33,7 @@ body {
   border-radius: 35px;
   position: relative;
 }
-/* Card Gauche */
+/* Left Card */
 .card-left {
   display: flex;
   flex-direction: column;
@@ -45,18 +45,18 @@ body {
 .card-left > * {
   margin: 0px;
 }
-/* Titre principale */
+/* Main title */
 .title {
   font-size: 3.5em;
   color: var(--darkGrey);
   margin-bottom: 10px;
 }
-/* Sous titre */
+/* Sub Title */
 .subTitle {
   font-size: var(--fontSize);
   margin-bottom: 15px;
 }
-/* Texte des spans */
+/* Span text */
 .text {
   margin: 3px 0px;
 }
@@ -66,13 +66,13 @@ span {
   align-items: center;
   gap: 10px;
 }
-/* titre de l'input */
+/* Input title */
 .inputTitle {
   color: var(--darkGrey);
   font-weight: 700;
   margin-top: 30px;
 }
-/* Input pour l'émail */
+/* Email input */
 .inputEmail {
   padding: 20px;
   border-radius: 10px;
@@ -88,7 +88,7 @@ span {
   color: var(--tomato);
   font-size: var(--fontSize);
 }
-/* Bouton de validation */
+/* Valid button */
 .button {
   padding: 20px;
   border-radius: 10px;
@@ -104,13 +104,13 @@ button:hover {
   background-color: var(--tomato);
   color: var(--white);
 }
-
+/* Title input div */
 .textInput {
   display: grid;
   justify-content: space-between;
   align-content: center;
 }
-
+/* Class for the error event */
 .errorEvent {
   display: flex;
   margin-top: 30px;
@@ -119,11 +119,11 @@ button:hover {
   right: 530px;
   justify-self: flex-end;
 }
-
+/* Right card */
 .card-right {
   z-index: 200;
 }
-
+/* Div for the thanks message */
 .thanksMessage {
   display: flex;
   flex-direction: column;
@@ -134,13 +134,13 @@ button:hover {
   position: absolute;
   top: 1000px;
 }
-
+/* Svg  */
 .svg {
   display: flex;
   align-self: flex-start;
   margin-bottom: 20px;
 }
-
+/* sucess button */
 .buttonSucess {
   padding: 20px;
   width: 100%;
@@ -157,15 +157,15 @@ button:hover {
   background-color: var(--tomato);
   color: var(--white);
 }
-
+/* User email span */
 .userEmail {
   display: inline;
 }
-
+/* disable scrollbar */
 ::-webkit-scrollbar {
   display: none;
 }
-
+/* title of the thanks div */
 .successTitle {
   font-size: 3.5em;
   color: var(--darkGrey);
