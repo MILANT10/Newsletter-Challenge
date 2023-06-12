@@ -14,6 +14,7 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet" />
+      
     <title>
       Frontend Mentor | Newsletter sign-up form with success message
     </title>
@@ -45,7 +46,8 @@
                 d="M6 11.381 8.735 14 15 8" />
             </g>
           </svg>
-          <p class="text">Product discovery and building what matters</p></span>
+          <p class="text">Product discovery and building what matters</p></span
+        >
         <span>
           <svg
             class="svg"
@@ -61,7 +63,8 @@
                 d="M6 11.381 8.735 14 15 8" />
             </g>
           </svg>
-          <p class="text">Measuring to ensure updates are a success</p></span>
+          <p class="text">Measuring to ensure updates are a success</p></span
+        >
         <span>
           <svg
             class="svg"
@@ -77,22 +80,29 @@
                 d="M6 11.381 8.735 14 15 8" />
             </g>
           </svg>
-          <p class="text">And much more!</p></span>
-          <!-- Titre de l'input -->
-        <p class="inputTitle">Email adress</p>
+          <p class="text">And much more!</p></span
+        >
+        <!-- Titre de l'input -->
+        <div class="textInput">
+          <p class="inputTitle">Email adress</p>
+          <p class="errorEvent">Valid email required</p>
+        </div>
+
         <!-- Input de l'émail -->
-        <input 
+        <input
           class="inputEmail"
           type="email"
           name="Email"
           id="email"
           placeholder="email@company.com" />
-          <!-- Bouton de validation de la newsletter -->
-        <button type="button" class="button">Subscribe to monthly Newsletter</button>
+        <!-- Bouton de validation de la newsletter -->
+        <button type="button" class="button">
+          Subscribe to monthly Newsletter
+        </button>
       </div>
       <!-- Card droite avec svg -->
       <div class="card-right">
-        <svg
+        <svg class="svgCardRight"
           xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink"
           width="400"
@@ -307,6 +317,7 @@
       </div>
     </div>
     <!-- Script JS -->
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
     <script src="main.js"></script>
   </body>
 </html>

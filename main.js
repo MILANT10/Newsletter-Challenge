@@ -1,16 +1,29 @@
 let input = document.querySelector(".inputEmail");
 let boutonValidation = document.querySelector(".button");
+let textError = document.querySelector(".errorEvent");
+
+// textError.style.display = "none";
 
 
-input.addEventListener("keypress", (event) =>{
-    const inputValue = event.target.value;
-    const caracterOnly =  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+input.addEventListener("keypress", (event) => {
+  
+});
 
-  if (!inputValue.match(caracterOnly)) {
-    event.target.value = inputValue.replace(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/, " ");
+boutonValidation.addEventListener("click", (event) => {
+  event.preventDefault(); 
+
+  var inputValue = input.value; 
+  if (isValidEmail(inputValue)) {
+    console.log("Votre adresse e-mail est correcte");
+  } else {
+    $(textError).css("display", "flex");
+    $(textError).animate({left: "675px"}); 
   }
 });
 
-boutonValidation.addEventListener("click", () =>{
 
-});
+function isValidEmail(email) {
+  var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  return emailRegex.test(email);
+}
+

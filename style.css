@@ -5,6 +5,7 @@
   --grey: hsl(231, 7%, 60%);
   --white: hsl(0, 0%, 100%);
   --fontSize: 16px;
+  --tomato : hsl(4, 100%, 67%);
 }
 /* Regle HTML BODY */
 html,
@@ -91,3 +92,20 @@ span{
 button:hover{
   cursor: pointer;
 }
+
+.textInput{
+  display: grid;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.errorEvent{
+  display: flex;
+  margin-top: 30px;
+  color: var(--tomato);
+  position: fixed;
+  right: 530px;
+  justify-self: flex-end;
+  z-index: -1;
+}
+
