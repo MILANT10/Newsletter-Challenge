@@ -4,7 +4,13 @@ let textError = document.querySelector(".errorEvent");
 let validationAnimation = false;
 let div = $(".thanksMessage");
 let container = document.querySelector(".container");
+let boutonSucess = document.querySelector(".buttonSucess");
 div.hide();
+
+// Empêcher le défilement de la page
+function disableScroll() {
+  document.body.style.overflow = "hidden";
+}
 
 
 input.addEventListener("click", () => {
@@ -30,6 +36,10 @@ boutonValidation.addEventListener("click", (event) => {
   }
 });
 
+boutonSucess.addEventListener("click", () =>{
+  $(div).animate({left: "-500px"}, 2000).css("display", "relative");
+});
+
 function isValidEmail(email) {
   var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   return emailRegex.test(email);
@@ -38,7 +48,7 @@ function isValidEmail(email) {
 function emailThanks(inputValue) {
   $(div).show();
   $(container).animate({bottom: "850px", }, 2000);
-  $(div).animate({top: "290px"}, 2000).css("display", "relative");
+  $(div).animate({top: "250px"}, 2000).css("display", "relative");
   $(".userEmail").text(inputValue);
   $(".userEmail").css("fontWeight", "bold");
 }
