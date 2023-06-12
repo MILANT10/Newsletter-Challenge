@@ -101,6 +101,8 @@ span {
 
 button:hover {
   cursor: pointer;
+  background-color: var(--tomato);
+  color: var(--white);
 }
 
 .textInput {
@@ -148,6 +150,12 @@ button:hover {
   background-color: var(--darkGrey);
   margin-top: 15px;
   font-size: var(--fontSize);
+}
+
+.buttonSucess :hover{
+  cursor: pointer;
+  background-color: var(--tomato);
+  color: var(--white);
 }
 
 .userEmail {
