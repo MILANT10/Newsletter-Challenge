@@ -14,7 +14,7 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet" />
-      
+
     <title>
       Frontend Mentor | Newsletter sign-up form with success message
     </title>
@@ -32,54 +32,15 @@
         </p>
         <!-- Liste de Span -->
         <span>
-          <svg
-            class="svg"
-            xmlns="http://www.w3.org/2000/svg"
-            width="21"
-            height="21"
-            viewBox="0 0 21 21">
-            <g fill="none">
-              <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
-              <path
-                stroke="#FFF"
-                stroke-width="2"
-                d="M6 11.381 8.735 14 15 8" />
-            </g>
-          </svg>
+         <img src="./assets/images/icon-list.svg" alt="icon check list">
           <p class="text">Product discovery and building what matters</p></span
         >
         <span>
-          <svg
-            class="svg"
-            xmlns="http://www.w3.org/2000/svg"
-            width="21"
-            height="21"
-            viewBox="0 0 21 21">
-            <g fill="none">
-              <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
-              <path
-                stroke="#FFF"
-                stroke-width="2"
-                d="M6 11.381 8.735 14 15 8" />
-            </g>
-          </svg>
+          <img src="./assets/images/icon-list.svg" alt="icon check list">
           <p class="text">Measuring to ensure updates are a success</p></span
         >
         <span>
-          <svg
-            class="svg"
-            xmlns="http://www.w3.org/2000/svg"
-            width="21"
-            height="21"
-            viewBox="0 0 21 21">
-            <g fill="none">
-              <circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155" />
-              <path
-                stroke="#FFF"
-                stroke-width="2"
-                d="M6 11.381 8.735 14 15 8" />
-            </g>
-          </svg>
+          <img src="./assets/images/icon-list.svg" alt="icon check list">
           <p class="text">And much more!</p></span
         >
         <!-- Titre de l'input -->
@@ -87,7 +48,6 @@
           <p class="inputTitle">Email adress</p>
           <p class="errorEvent">Valid email required</p>
         </div>
-
         <!-- Input de l'émail -->
         <input
           class="inputEmail"
@@ -102,7 +62,8 @@
       </div>
       <!-- Card droite avec svg -->
       <div class="card-right">
-        <svg class="svgCardRight"
+        <svg
+          class="svgCardRight"
           xmlns="http://www.w3.org/2000/svg"
           xmlns:xlink="http://www.w3.org/1999/xlink"
           width="400"
@@ -316,8 +277,23 @@
         </svg>
       </div>
     </div>
+    <div class="thanksMessage">
+      <img class="svg" src="./assets/images/icon-success.svg" alt="success icon">
+
+      <h2 class="title">Thanks for subscribbing</h2>
+      <p class="text">
+        A confirmation email has been sent to
+        <span class="userEmail">email user</span>. Please open it and click the
+        button inside to confirm your subscription
+      </p>
+
+      <button type="button" class="buttonValid">Dismiss message</button>
+    </div>
     <!-- Script JS -->
-    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"></script>
     <script src="main.js"></script>
   </body>
 </html>
