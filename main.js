@@ -38,7 +38,7 @@ function isValidEmail(email) {
 function emailThanks(inputValue) {
   $(div).show();
   $(container).animate({bottom: "850px", }, 2000);
-  $(div).animate({top: "320px"}, 2000).css("display", "relative");
+  $(div).animate({top: "290px"}, 2000).css("display", "relative");
   $(".userEmail").text(inputValue);
   $(".userEmail").css("fontWeight", "bold");
 }

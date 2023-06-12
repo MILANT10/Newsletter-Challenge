@@ -5,7 +5,7 @@
   --grey: hsl(231, 7%, 60%);
   --white: hsl(0, 0%, 100%);
   --fontSize: 16px;
-  --tomato : hsl(4, 100%, 67%);
+  --tomato: hsl(4, 100%, 67%);
 }
 /* Regle HTML BODY */
 html,
@@ -14,7 +14,7 @@ body {
   width: 100%;
   margin: 0%;
   padding: 0%;
-  font-family: 'Roboto', sans-serif; 
+  font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -42,7 +42,7 @@ body {
   width: 400px;
 }
 
-.card-left > *{
+.card-left > * {
   margin: 0px;
 }
 /* Titre principale */
@@ -52,28 +52,28 @@ body {
   margin-bottom: 10px;
 }
 /* Sous titre */
-.subTitle{
-    font-size: var(--fontSize);
-    margin-bottom: 15px;
+.subTitle {
+  font-size: var(--fontSize);
+  margin-bottom: 15px;
 }
 /* Texte des spans */
-.text{
+.text {
   margin: 3px 0px;
 }
 /* Span */
-span{
+span {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 /* titre de l'input */
-.inputTitle{
+.inputTitle {
   color: var(--darkGrey);
   font-weight: 700;
   margin-top: 30px;
 }
 /* Input pour l'émail */
-.inputEmail{
+.inputEmail {
   padding: 20px;
   border-radius: 10px;
   border: 1px solid var(--grey);
@@ -81,7 +81,7 @@ span{
   color: black;
 }
 
-.errorInputEmail{
+.errorInputEmail {
   padding: 20px;
   border-radius: 10px;
   border: 1px solid var(--tomato);
@@ -89,7 +89,7 @@ span{
   font-size: var(--fontSize);
 }
 /* Bouton de validation */
-.button{
+.button {
   padding: 20px;
   border-radius: 10px;
   border: none;
@@ -99,47 +99,47 @@ span{
   font-size: var(--fontSize);
 }
 
-button:hover{
+button:hover {
   cursor: pointer;
 }
 
-.textInput{
+.textInput {
   display: grid;
   justify-content: space-between;
   align-content: center;
 }
 
-.errorEvent{
+.errorEvent {
   display: flex;
   margin-top: 30px;
   color: var(--tomato);
   position: fixed;
   right: 530px;
   justify-self: flex-end;
-  
 }
 
-.card-right{
+.card-right {
   z-index: 200;
 }
 
-.thanksMessage{
+.thanksMessage {
   display: flex;
   flex-direction: column;
   background-color: var(--white);
   width: 350px;
-  padding: 20px;
-  border-radius: 15px;
+  padding: 50px;
+  border-radius: 35px;
   position: absolute;
-  top: 900px;
+  top: 1000px;
 }
 
-.svg{
+.svg {
   display: flex;
   align-self: flex-start;
+  margin-bottom: 20px;
 }
 
-.buttonValid{
+.buttonValid {
   padding: 20px;
   width: 100%;
   border-radius: 10px;
@@ -150,10 +150,17 @@ button:hover{
   font-size: var(--fontSize);
 }
 
-.userEmail{
+.userEmail {
   display: inline;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   display: none;
 }
+
+.successTitle {
+  font-size: 3.5em;
+  color: var(--darkGrey);
+  margin: 0%;
+}
+
