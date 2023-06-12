@@ -1,3 +1,4 @@
+// Variables 
 let input = document.querySelector(".inputEmail");
 let boutonValidation = document.querySelector(".button");
 let textError = document.querySelector(".errorEvent");
@@ -7,10 +8,11 @@ let container = document.querySelector(".container");
 let boutonSucess = document.querySelector(".buttonSucess");
 div.hide();
 
+// Function for disable scroll
 function disableScroll() {
   document.body.style.overflow = "hidden";
 }
-
+// Event error email input
 input.addEventListener("click", () => {
   $(input).removeClass("errorInputEmail");
   $(input).addClass("inputEmail");
@@ -19,7 +21,7 @@ input.addEventListener("click", () => {
     $(textError).animate({ left: "935px" });
   }
 });
-
+// Event check email 
 boutonValidation.addEventListener("click", (event) => {
   event.preventDefault();
 
@@ -33,7 +35,7 @@ boutonValidation.addEventListener("click", (event) => {
     validationAnimation = true;
   }
 });
-
+// Event succes box and reload page
 boutonSucess.addEventListener("click", () => {
   $(div).animate({ left: "-500px" }, 2000).css("display", "relative");
   $(container).animate({ top: "0px" }, 3500);
@@ -42,12 +44,12 @@ boutonSucess.addEventListener("click", () => {
     location.reload();
   }, 3800);
 });
-
+// function valid email
 function isValidEmail(email) {
   var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   return emailRegex.test(email);
 }
-
+// Function email sub thanks
 function emailThanks(inputValue) {
   $(div).show();
   $(container).animate({ bottom: "850px" }, 2000);
