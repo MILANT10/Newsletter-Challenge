@@ -77,6 +77,15 @@ span{
   border-radius: 10px;
   border: 1px solid var(--grey);
   font-size: var(--fontSize);
+  color: black;
+}
+
+.errorInputEmail{
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid var(--tomato);
+  color: var(--tomato);
+  font-size: var(--fontSize);
 }
 /* Bouton de validation */
 .button{
@@ -106,6 +115,9 @@ button:hover{
   position: fixed;
   right: 530px;
   justify-self: flex-end;
-  z-index: -1;
+  
 }
 
+.card-right{
+  z-index: 200;
+}

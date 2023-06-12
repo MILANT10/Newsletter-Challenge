@@ -1,12 +1,18 @@
 let input = document.querySelector(".inputEmail");
 let boutonValidation = document.querySelector(".button");
 let textError = document.querySelector(".errorEvent");
+let validationAnimation = false;
 
 // textError.style.display = "none";
 
 
-input.addEventListener("keypress", (event) => {
-  
+input.addEventListener("click", () => {
+  $(input).removeClass("errorInputEmail");
+  $(input).addClass("inputEmail");
+  if(validationAnimation == true){
+    validationAnimation = false;
+    $(textError).animate({left: "935px"});
+  }
 });
 
 boutonValidation.addEventListener("click", (event) => {
@@ -16,8 +22,10 @@ boutonValidation.addEventListener("click", (event) => {
   if (isValidEmail(inputValue)) {
     console.log("Votre adresse e-mail est correcte");
   } else {
+    $(input).addClass("errorInputEmail");
     $(textError).css("display", "flex");
-    $(textError).animate({left: "675px"}); 
+    $(textError).animate({left: "675px"});
+    validationAnimation = true;
   }
 });
 
