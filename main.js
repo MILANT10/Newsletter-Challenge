@@ -3,6 +3,7 @@ let boutonValidation = document.querySelector(".button");
 let textError = document.querySelector(".errorEvent");
 let validationAnimation = false;
 let div = $(".thanksMessage");
+let container = document.querySelector(".container");
 div.hide();
 
 
@@ -34,7 +35,10 @@ function isValidEmail(email) {
   return emailRegex.test(email);
 }
 
-function emailThanks(email) {
-  // Code pour afficher le message de remerciement
+function emailThanks(inputValue) {
   $(div).show();
+  $(container).animate({bottom: "850px", }, 2000);
+  $(div).animate({top: "320px"}, 2000).css("display", "relative");
+  $(".userEmail").text(inputValue);
+  $(".userEmail").css("fontWeight", "bold");
 }
