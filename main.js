@@ -64,11 +64,11 @@ boutonValidation.addEventListener("click", (event) => {
 // Event success box and reload page
 boutonSucess.addEventListener("click", () => {
   $(div).animate({ left: "-500px" }, 1200).css("display", "relative");
-  $(container).animate({ top: "0px" }, 3500);
+  $(container).animate({ top: "0px" }, 2500);
   input.value = "";
   setTimeout(() => {
     location.reload();
-  }, 3800);
+  }, 2800);
 });
 
 // Function to validate email
