@@ -200,4 +200,7 @@ button:hover {
     padding: 35px;
   }
 
+  .errorEvent{
+    right: -150px;
+  }
 }

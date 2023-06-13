@@ -7,6 +7,7 @@ let div = document.querySelector(".thanksMessage");
 let container = document.querySelector(".container");
 let boutonSucess = document.querySelector(".buttonSucess");
 div.style.display = "none";
+let mobileView = false;
 
 // Function for disable scroll
 function disableScroll() {
@@ -14,12 +15,22 @@ function disableScroll() {
 }
 
 // Event error email input
+
 input.addEventListener("click", () => {
-  input.classList.remove("errorInputEmail");
-  input.classList.add("inputEmail");
-  if (validationAnimation) {
-    validationAnimation = false;
-    $(textError).animate({ left: "935px" });
+  if (mobileView === true) {
+    input.classList.remove("errorInputEmail");
+    input.classList.add("inputEmail");
+    if (validationAnimation) {
+      validationAnimation = false;
+      $(textError).animate({ right: "-150px" });
+    }
+  } else {
+    input.classList.remove("errorInputEmail");
+    input.classList.add("inputEmail");
+    if (validationAnimation) {
+      validationAnimation = false;
+      $(textError).animate({ left: "935px" });
+    }
   }
 });
 
@@ -27,14 +38,26 @@ input.addEventListener("click", () => {
 boutonValidation.addEventListener("click", (event) => {
   event.preventDefault();
 
-  var inputValue = input.value;
-  if (isValidEmail(inputValue)) {
-    emailThanks(inputValue);
+  if (mobileView === true) {
+    var inputValue = input.value;
+    if (isValidEmail(inputValue)) {
+      emailThanks(inputValue);
+    } else {
+      input.classList.add("errorInputEmail");
+      textError.style.display = "flex";
+      $(textError).animate({ right: "25px" });
+      validationAnimation = true;
+    }
   } else {
-    input.classList.add("errorInputEmail");
-    textError.style.display = "flex";
-    $(textError).animate({ left: "675px" });
-    validationAnimation = true;
+    var inputValue = input.value;
+    if (isValidEmail(inputValue)) {
+      emailThanks(inputValue);
+    } else {
+      input.classList.add("errorInputEmail");
+      textError.style.display = "flex";
+      $(textError).animate({ left: "675px" });
+      validationAnimation = true;
+    }
   }
 });
 
@@ -56,22 +79,29 @@ function isValidEmail(email) {
 
 // Function for email submission thanks
 function emailThanks(inputValue) {
-  div.style.display = "block";
+
+  if(mobileView === true){
+    div.style.display = "block";
+    $(container).animate({ bottom: "950px" }, 2100);
+    $(div).animate({ top: "250px" }, 2100).css("display", "relative");
+    $(".userEmail").text(inputValue);
+    $(".userEmail").css("fontWeight", "bold");
+  } else{
+    div.style.display = "block";
   $(container).animate({ bottom: "850px" }, 2000);
   $(div).animate({ top: "250px" }, 2000).css("display", "relative");
   $(".userEmail").text(inputValue);
   $(".userEmail").css("fontWeight", "bold");
+  }
 }
 
 function mobile() {
   if (window.innerWidth <= 468) {
     let svgRight = document.querySelector(".imgCardRight");
-    svgRight.outerHTML = '<img class="imgCardRight" src="./assets/images/illustration-sign-up-mobile.svg" alt="illustration-sign-up-mobile">';
-    console.log("Cela fonctionne");
+    svgRight.outerHTML =
+      '<img class="imgCardRight" src="./assets/images/illustration-sign-up-mobile.svg" alt="illustration-sign-up-mobile">';
+    mobileView = true;
   }
-
-  
 }
 
 document.addEventListener("DOMContentLoaded", mobile);
-
