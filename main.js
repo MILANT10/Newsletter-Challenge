@@ -63,7 +63,7 @@ boutonValidation.addEventListener("click", (event) => {
 
 // Event success box and reload page
 boutonSucess.addEventListener("click", () => {
-  $(div).animate({ left: "-500px" }, 2000).css("display", "relative");
+  $(div).animate({ left: "-500px" }, 1200).css("display", "relative");
   $(container).animate({ top: "0px" }, 3500);
   input.value = "";
   setTimeout(() => {
@@ -81,9 +81,9 @@ function isValidEmail(email) {
 function emailThanks(inputValue) {
 
   if(mobileView === true){
-    div.style.display = "block";
+    div.style.display = "flex";
     $(container).animate({ bottom: "950px" }, 2100);
-    $(div).animate({ top: "250px" }, 2100).css("display", "relative");
+    $(div).animate({ top: "0px" }, 2100).css("display", "relative");
     $(".userEmail").text(inputValue);
     $(".userEmail").css("fontWeight", "bold");
   } else{
