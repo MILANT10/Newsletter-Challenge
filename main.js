@@ -8,7 +8,6 @@ let container = document.querySelector(".container");
 let boutonSucess = document.querySelector(".buttonSucess");
 div.style.display = "none";
 
-
 // Function for disable scroll
 function disableScroll() {
   document.body.style.overflow = "hidden";
@@ -64,15 +63,15 @@ function emailThanks(inputValue) {
   $(".userEmail").css("fontWeight", "bold");
 }
 
-function mobile(){
-  if(window.innerWidth <= 426){
-    console.log("Bonjour cela fonctionne")
-  } else {
-    console.log("aller nique ta mère");
+function mobile() {
+  if (window.innerWidth <= 468) {
+    let svgRight = document.querySelector(".imgCardRight");
+    svgRight.outerHTML = '<img class="imgCardRight" src="./assets/images/illustration-sign-up-mobile.svg" alt="illustration-sign-up-mobile">';
+    console.log("Cela fonctionne");
   }
 
-  let windowWidth = window.innerWidth;
-  console.log(windowWidth);
+  
 }
 
 document.addEventListener("DOMContentLoaded", mobile);
+
